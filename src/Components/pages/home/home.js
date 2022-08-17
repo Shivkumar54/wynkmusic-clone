@@ -58,7 +58,7 @@ const Home = () => {
 
   useEffect(() => {
     const requestPlayerBackground = async () => {
-      const getImages = await axios.get("/movie/popular");
+      const getImages = await axios.get("/movie/top_rated");
       setImages(getImages.data.results);
     };
     requestPlayerBackground()
