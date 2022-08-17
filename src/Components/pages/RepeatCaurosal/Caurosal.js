@@ -116,13 +116,13 @@ const Caurosal = (props) => {
              <Slider {...settings} className="sliderr">
           {recentimages.map((eachimg) => {
             return (
-              <div className='heroImg'>
+              <div key={eachimg.id} className='heroImg'>
                 <FaPlayCircle size={30} className="player " />
                 <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
                 <p>{`${eachimg.original_title}`}</p>
            </div>
          )
-       })}
+        })}
         </Slider>  
       </div>
       
@@ -133,7 +133,7 @@ const Caurosal = (props) => {
              <Slider {...settings} className="sliderr">
           {newimages.map((eachimg) => {
             return (
-              <div className='heroImg'>
+              <div key={eachimg.id} className='heroImg'>
                 <FaPlayCircle size={30} className="player " />
                 <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
                 <p>{`${eachimg.original_title}`}</p>
@@ -148,7 +148,7 @@ const Caurosal = (props) => {
              <Slider {...settings} className="sliderr">
           {topimages.map((eachimg) => {
             return (
-              <div className='heroImg'>
+              <div key={eachimg.id} className='heroImg'>
                 <FaPlayCircle size={30} className="player " />
                 <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
                 <p>{`${eachimg.original_title}`}</p>
