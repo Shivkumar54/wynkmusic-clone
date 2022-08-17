@@ -2,7 +2,9 @@ import React from 'react'
 
 const Download = () => {
   return (
-    <div>Download</div>
+    <div>
+      <h1>Updating Download Soon.....</h1>
+    </div>
   )
 }
 

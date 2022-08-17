@@ -2,7 +2,9 @@ import React from 'react'
 
 const Podcast = () => {
   return (
-    <div>Podcast</div>
+    <div>
+      <h1>Updating Podcast Soon.....</h1>
+    </div>
   )
 }
 
