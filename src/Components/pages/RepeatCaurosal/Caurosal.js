@@ -57,7 +57,7 @@ const Caurosal = (props) => {
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 1,
-        centerPadding: "30px",
+        centerPadding: "10px",
         responsive: [
           {
             breakpoint: 1024,
