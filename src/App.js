@@ -6,6 +6,8 @@ import Navbar from './Components/pages/Navbar/Navbar';
 import Podcast from './Components/pages/Podcast/Podcast';
 import SignUp from './Components/pages/SignUp/SignUp';
 import { Routes, Route } from "react-router-dom";
+import Content from './Components/pages/HomeContent/Content';
+import Footer from './Components/pages/Footer/Footer';
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 axios.defaults.params = {};
@@ -20,9 +22,10 @@ function App() {
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/download" element={<Download />} />
           <Route path="/sign" element={<SignUp />} />
-          
         </Route>
       </Routes>
+      <Content />
+        <Footer />
     </div>
   );
 }
