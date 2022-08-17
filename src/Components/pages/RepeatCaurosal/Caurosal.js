@@ -11,10 +11,11 @@ const Caurosal = (props) => {
   const [recentimages, setRecentImages] = useState([])
   const [topimages, setTopImages] = useState([])
   const [newimages, setNewImages] = useState([])
+  const [newPicture, setNewPicture] = useState([])
 
   useEffect(() => {
     const requestRecentlyplayedImages = async () => {
-      const getRecentImages = await axios.get('/movie/now_playing');
+      const getRecentImages = await axios.get('/tv/popular');
       setRecentImages(getRecentImages.data.results)
     };
     requestRecentlyplayedImages()
@@ -40,8 +41,13 @@ const Caurosal = (props) => {
   },[])
 
 
-
-
+  useEffect(() => {
+    const requestArtistPicture = async () => {
+      const getArtist = await axios.get("/person/popular")
+      setNewPicture(getArtist.data.results)
+    };
+    requestArtistPicture()
+},[])
 
     const settings = {
       arrows: true,
@@ -119,7 +125,7 @@ const Caurosal = (props) => {
               <div key={eachimg.id} className='heroImg'>
                 <FaPlayCircle size={30} className="player " />
                 <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
-                <p>{`${eachimg.original_title}`}</p>
+                <p>{`${eachimg.name}`}</p>
            </div>
          )
         })}
@@ -157,6 +163,25 @@ const Caurosal = (props) => {
        })}
         </Slider>  
       </div>
+
+
+      <div className="siderImg">
+        <h2 className='heading'>{props.heading } Top Artist </h2>
+             <Slider {...settings} className="sliderr">
+          {newPicture.map((eachimg) => {
+            return (
+              <div key={eachimg.id} className='heroImg'>
+                <FaPlayCircle size={30} className="player " />
+                <img src={`https://image.tmdb.org/t/p/original${eachimg.profile_path}`} alt="" />
+                <p>{`${eachimg.name}`}</p>
+           </div>
+         )
+       })}
+        </Slider>  
+      </div>
+
+      
+
       
       {/* Duplicates  */}
 
