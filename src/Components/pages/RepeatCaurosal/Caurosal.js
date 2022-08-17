@@ -99,7 +99,8 @@ const Caurosal = (props) => {
            </div>
          )
        })}
-    </Slider> 
+        </Slider> 
+        
           </div>
     </div>
   )
