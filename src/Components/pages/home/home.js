@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Caurosal from '../RepeatCaurosal/Caurosal';
 import Content from '../HomeContent/Content';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -79,8 +80,9 @@ const Home = () => {
     </Slider>
       </div>
       <div>
-        {/* <Caurosal /> */}
+        <Caurosal />
         <Content />
+        <Footer />
         
       </div>
     </div>
