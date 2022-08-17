@@ -1,0 +1,35 @@
+.slide{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.heroImg{
+    margin-top: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    padding:0 5px
+
+}
+.heroImg img{
+    width: 100%;
+    height: 300px;
+    border-radius:10px;
+}
+
+@media screen and (max-width:1020px) {
+    .heroImg{
+        margin-top: 30px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:80%;
+        padding:0 5px
+    
+    }
+    .heroImg img{
+        width: 100%;
+        height: 150px;
+        border-radius:10px;
+    }
+}

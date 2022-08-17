@@ -1,0 +1,33 @@
+.caurosalRoot{
+    margin-top:0px;
+    margin-bottom:40px;
+}
+
+.heading{
+    padding: 0;
+    font-size: 25px;
+    margin-bottom:-30px
+}
+
+.siderImg{
+    margin:0;
+    padding:0;
+
+}
+
+.siderImg img{
+    margin:0;
+    width:150px;
+    height:150px;
+    padding: 0 5px;
+    border-radius: 15px;
+    position: relative;
+}
+.player{
+    position: absolute;
+    float: right;
+    z-index: 1;
+    bottom: 100px;
+    margin-left:110px;
+
+}
