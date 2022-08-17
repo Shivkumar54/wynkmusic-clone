@@ -40,8 +40,10 @@ const Navbar = () => {
     <div className="navv">
           <div className="navvv">
           <div className="navbarroot container-xl">
-              <div className="navImg">
-                  <img src={Logo} alt="Page Logo" width="160px"/>
+                  <div className="navImg">
+                      <Link to="/" >
+                          <img src={Logo} alt="Page Logo" width="160px" />
+                      </Link>
               </div>
               <div className="search">
                   <ImSearch size={20} className="iconer"/>
