@@ -12,7 +12,8 @@
 .searcher{
     background-color: #21252D;
     /* border: 0.5px solid white; */
-    box-shadow: rgba(209, 209, 209, 0.16) 0px 1px 4px;
+    border:none;
+    /* box-shadow: rgba(209, 209, 209, 0.16) 0px 1px 4px; */
     border-radius: 5px;
     width: fit-content;
     padding:5px 10px;
