@@ -1,0 +1,47 @@
+.boxeer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.about{
+    border: 1px solid rgb(180, 180, 180);
+    padding: 30px 0 30px 60px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.para{
+    width:80%;
+    font-size: 13px;
+    color: rgb(160, 160, 160);
+}
+
+.down{
+    background-color:#21252D;
+    height:100px;
+    width:100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.imager{
+    display: flex;
+    gap: 15px;
+    align-items:center;
+}
+.imager h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.imager p {
+    margin: 0;
+    padding: 0;
+}
+.apper img{
+    margin:0 10px;
+}

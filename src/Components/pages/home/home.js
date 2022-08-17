@@ -5,8 +5,9 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import DefaultCaurosal from '../EntireCaurosal/DefaultCaurosal';
+
 import Caurosal from '../RepeatCaurosal/Caurosal';
+import Content from '../HomeContent/Content';
 
 
 const Home = () => {
@@ -64,9 +65,6 @@ const Home = () => {
     requestPlayerBackground()
   },[])
 
-
-
-
   return (
     <div>
           <div className=' slide mx-auto'>
@@ -81,8 +79,9 @@ const Home = () => {
     </Slider>
       </div>
       <div>
-
-      <Caurosal />
+        {/* <Caurosal /> */}
+        <Content />
+        
       </div>
     </div>
   )
