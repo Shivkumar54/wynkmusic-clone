@@ -65,7 +65,7 @@ const Podcast = () => {
   return (
     <div>
       <div className="podcastCaurosal container">
-        <h2>Podcast Categoriess</h2>
+        <h2 className='heading' >Podcast Categoriess</h2>
       <Slider {...settings} className="sliderr">
           {images.map((image) => {
             return (
