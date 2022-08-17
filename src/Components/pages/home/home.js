@@ -5,7 +5,9 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import DefaultCaurosal from '../EntireCaurosal/DefaultCaurosal';
+// import DefaultCaurosal from '../EntireCaurosal/DefaultCaurosal';
+import Caurosal from '../RepeatCaurosal/Caurosal';
+
 
 const Home = () => {
 
@@ -80,7 +82,7 @@ const Home = () => {
       </div>
       <div>
 
-      <DefaultCaurosal />
+      <Caurosal />
       </div>
     </div>
   )

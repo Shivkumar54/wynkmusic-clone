@@ -9,6 +9,8 @@ import {FaPlayCircle} from "react-icons/fa"
 const Caurosal = (props) => {
 
   const [recentimages, setRecentImages] = useState([])
+  const [topimages, setTopImages] = useState([])
+  const [newimages, setNewImages] = useState([])
 
   useEffect(() => {
     const requestRecentlyplayedImages = async () => {
@@ -17,6 +19,28 @@ const Caurosal = (props) => {
     };
     requestRecentlyplayedImages()
   },[])
+
+
+
+  useEffect(() => {
+    const requestNewplayedImages = async () => {
+      const getTopImages = await axios.get('/movie/top_rated');
+      setNewImages(getTopImages.data.results)
+    };
+    requestNewplayedImages()
+  },[])
+
+
+  useEffect(() => {
+    const requestRecentlyplayedImages = async () => {
+      const getRecentImages = await axios.get('/movie/popular');
+      setRecentImages(getRecentImages.data.results)
+    };
+    requestRecentlyplayedImages()
+  },[])
+
+
+
 
 
     const settings = {
@@ -88,7 +112,7 @@ const Caurosal = (props) => {
   return (
     <div className='container-lg caurosalRoot '>
       <div className="siderImg">
-        <h2 className='heading'>{props.heading }</h2>
+        <h2 className='heading'>{props.heading }  Recently Played </h2>
              <Slider {...settings} className="sliderr">
           {recentimages.map((eachimg) => {
             return (
@@ -99,9 +123,45 @@ const Caurosal = (props) => {
            </div>
          )
        })}
-        </Slider> 
-        
-          </div>
+        </Slider>  
+      </div>
+      
+
+      {/* Duplicates  */}
+      <div className="siderImg">
+        <h2 className='heading'>{props.heading } New Releases </h2>
+             <Slider {...settings} className="sliderr">
+          {newimages.map((eachimg) => {
+            return (
+              <div className='heroImg'>
+                <FaPlayCircle size={30} className="player " />
+                <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
+                <p>{`${eachimg.original_title}`}</p>
+           </div>
+         )
+       })}
+        </Slider>  
+      </div>
+      
+      <div className="siderImg">
+        <h2 className='heading'>{props.heading } Top Lists </h2>
+             <Slider {...settings} className="sliderr">
+          {topimages.map((eachimg) => {
+            return (
+              <div className='heroImg'>
+                <FaPlayCircle size={30} className="player " />
+                <img src={`https://image.tmdb.org/t/p/original${eachimg.poster_path}`} alt="" />
+                <p>{`${eachimg.original_title}`}</p>
+           </div>
+         )
+       })}
+        </Slider>  
+      </div>
+      
+      {/* Duplicates  */}
+
+      
+
     </div>
   )
 }
