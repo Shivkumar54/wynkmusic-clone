@@ -24,7 +24,7 @@ const Caurosal = (props) => {
 
   useEffect(() => {
     const requestNewplayedImages = async () => {
-      const getTopImages = await axios.get('/movie/top_rated');
+      const getTopImages = await axios.get('/movie/popular');
       setNewImages(getTopImages.data.results)
     };
     requestNewplayedImages()
@@ -32,11 +32,11 @@ const Caurosal = (props) => {
 
 
   useEffect(() => {
-    const requestRecentlyplayedImages = async () => {
-      const getRecentImages = await axios.get('/movie/popular');
-      setRecentImages(getRecentImages.data.results)
+    const requestTopPlayedImages = async () => {
+      const getRecentImages = await axios.get('/movie/top_rated');
+      setTopImages(getRecentImages.data.results)
     };
-    requestRecentlyplayedImages()
+    requestTopPlayedImages()
   },[])
 
 
