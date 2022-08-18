@@ -80,10 +80,7 @@ const Home = () => {
     </Slider>
       </div>
       <div>
-        <Caurosal />
-        <Content />
-        <Footer />
-        
+        <Caurosal /> 
       </div>
     </div>
   )
